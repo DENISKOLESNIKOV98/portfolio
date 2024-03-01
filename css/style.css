@@ -1,0 +1,93 @@
+/*переменные*/
+/*Базовые стили */
+:root {}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: var();
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.img {
+    max-width: 100%;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /*Цвет текста наследовать от родителя */
+    color: inherit
+}
+
+.wrapper {
+    height: 100%;
+    min-height: 100%;
+}
+
+.conteiner {
+    max-width: 1120px;
+    padding: 0 5px;
+}
+
+/* hero  */
+.hero {
+    /*Цвет  секции берем из переменой , созданый выше*/
+    background-color: var(--section-grey);
+    padding-top: 56px;
+    padding-bottom: 146px;
+
+}
+
+/*hearder*/
+.hearder {
+    display: flex;
+    /* крайрей элементы прижимается к краям к родителям , оставшиеся выстраиваются внутри контейнера равномерно,так,чтобы между ними*/
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    width: 96px;
+    height: 60px;
+}
+
+.logo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.nav__list {
+    display: flex;
+
+
+
+}
