@@ -1,13 +1,12 @@
-/*переменные*/
-/*Базовые стили */
-:root {}
-
-* {
-    box-sizing: border-box;
+/* Переменные */
+:root {
+    --section-grey: #eeeff1;
+    --font-family: "Roboto", sans-serif;
 }
 
-.body {
-    font-family: var();
+/* Базовые стили */
+* {
+    box-sizing: border-box;
 }
 
 html,
@@ -15,11 +14,20 @@ body {
     height: 100%;
 }
 
-.img {
+body {
+    font-family: var(--font-family);
+}
+
+img {
     max-width: 100%;
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
@@ -31,40 +39,45 @@ ul {
 
 a {
     text-decoration: none;
-    /*Цвет текста наследовать от родителя */
-    color: inherit
+    /* Цвет текста наследовать от родителя */
+    color: inherit;
 }
 
 .wrapper {
-    height: 100%;
+    width: 100%;
     min-height: 100%;
+    overflow: hidden;
 }
 
-.conteiner {
+.container {
     max-width: 1120px;
-    padding: 0 5px;
+    padding: 0px 5px;
+    margin: 0 auto;
 }
 
-/* hero  */
+/* hero */
 .hero {
-    /*Цвет  секции берем из переменой , созданый выше*/
+    /* Цвет секции берем из переменной, созданной выше */
     background-color: var(--section-grey);
-    padding-top: 56px;
+    padding-top: 50px;
     padding-bottom: 146px;
-
 }
 
-/*hearder*/
-.hearder {
+/* header */
+.header {
     display: flex;
-    /* крайрей элементы прижимается к краям к родителям , оставшиеся выстраиваются внутри контейнера равномерно,так,чтобы между ними*/
+    /*  крайние элементы прижимаются к краям родителя, оставшиеся выстраиваются внутри контейнера равномерно, так, чтобы между ними были одинаковые отступы. */
     justify-content: space-between;
+    /* Выровнять элементы по центру по вертикали (при стандартном поведении flex-контейнера) */
+    align-items: center;
+    column-gap: 150px;
 }
 
 .logo {
     display: block;
     width: 96px;
     height: 60px;
+    flex-shrink: 0;
 }
 
 .logo__img {
@@ -73,21 +86,181 @@ a {
     object-fit: contain;
 }
 
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
 .nav__list {
     display: flex;
+    /* Расстояние между элементами внутри flex-контейнера */
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: -42px;
+}
 
+.nav__item {
+    margin-right: 42px;
+}
 
+.nav__link {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #000;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
 
+.nav__link:hover {
+    color: #34547a;
+}
+
+.hero__content {
+    padding-top: 162px;
+    display: flex;
+}
+
+.hero__img-wrap {
+    width: 356px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.hero__img {
+    width: 100%;
+    height: 234px;
+    object-fit: contain;
+}
+
+.hero__desc {
+    width: 50%;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;
+    color: #727272;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.hero .paragraph {
+    text-align: left;
+}
+
+.btn {
+    border: none;
+    background-color: #34547a;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero__btn {
+    padding: 25px 41px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.about {
+    padding-top: 119px;
+    padding-bottom: 100px;
+}
+
+.about__container {
+    max-width: 540px;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.achievements {
+    background-color: #34547a;
+    padding: 100px 0px;
+}
+
+.achievements__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.achievment {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 20px;
+}
+
+.achievment__icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.achievment__desc {
+    color: #fff;
+}
+
+.achievment__count {
+    font-weight: 500;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.skills {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.skills__content {
+    display: flex;
+}
+
+.skills__desc {
+    width: 50%;
+    padding-top: 100px;
+}
+
+.skills__item {
+    margin-bottom: 28px;
+}
+
+.skill__title {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #727272;
+}
+
+.skill__meter,
+.skill__meter::-webkit-meter-bar {
+    max-width: 445px;
+    width: 80%;
+    height: 4px;
+    border: none;
+    border-radius: 0px;
+}
+
+.skill__meter::-webkit-meter-optimum-value {
+    background-color: #34547a;
+}
+
+.skills__img-wrap {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.skills__img { 
+    
 }
