@@ -1,0 +1,47 @@
+@media (max-width) {
+    .
+}
+
+@media (max-width:768px) {
+    .hero {}
+
+    .hero__desc {
+        max-width: 540px;
+
+    }
+
+    .skills {}
+
+    .skills__content {}
+
+    .skills__img {}
+
+    .skills__img-wrap {}
+
+    .skills__desk {
+        padding-top: 100%;
+    }
+}
+
+
+
+
+
+
+@media (max-width:480px) {
+    .skills__desk {
+        padding-top: 100%;
+    }
+
+    .skill__meter,
+    .skill__meter::-webkit-meter-bar {
+        max-width: 445px;
+        width: 80%;
+        height: 4px;
+    }
+
+    .progects__item {
+        width: 50vw;
+        height: 50vw;
+    }
+}
